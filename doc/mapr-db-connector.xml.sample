@@ -1,0 +1,3 @@
+<!-- BEGIN_INCLUDE(mapr-db:scan) -->
+    <mapr-db:scan config-ref="" tableName="#[map-payload:tableName]" />
+<!-- END_INCLUDE(mapr-db:scan) -->

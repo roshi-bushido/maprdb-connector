@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+        
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.mule.modules</groupId>
+    <artifactId>mapr-db-connector</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>mule-module</packaging>
+    <name>Mule MaprDB Anypoint Connector</name>
+
+    <parent>
+        <groupId>org.mule.tools.devkit</groupId>
+        <artifactId>mule-devkit-parent</artifactId>
+        <version>3.7.1</version>
+    </parent>
+
+    <properties>
+        <category>Community</category>
+        <licensePath>LICENSE.md</licensePath>
+        <devkit.studio.package.skip>false</devkit.studio.package.skip>
+        <hbase.version>0.98.12-mapr-1506</hbase.version>
+        <mapr.version>5.0.0-mapr</mapr.version>
+        <hadoop.version>2.7.0-mapr-1506</hadoop.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-client</artifactId>
+            <version>${hbase.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mapr.fs</groupId>
+            <artifactId>mapr-hbase</artifactId>
+            <version>${mapr.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-auth</artifactId>
+            <version>${hadoop.version}</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>mulesoft-releases</id>
+            <name>MuleSoft Releases Repository</name>
+            <url>http://repository.mulesoft.org/releases/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>mapr-releases</id>
+            <name>Mapr Releases Repository</name>
+            <url>http://repository.mapr.com/nexus/content/repositories/mapr-public/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+</project>

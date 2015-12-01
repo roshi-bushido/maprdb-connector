@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG" name="example-config">
+   <Properties>
+       <Property name="PATTERN">%-5level %d [%t] %c:%M(%L): %m%n</Property>
+   </Properties>
+   <Appenders>
+       <Console name="STDOUT" target="SYSTEM_OUT">
+           <PatternLayout pattern="${PATTERN}"/>
+       </Console>
+   </Appenders>
+   <Loggers>
+		<AsyncLogger name="org.apache.hadoop.dfs" value="DEBUG" />
+		<AsyncLogger name="org.apache.hadoop.fs.FSNamesystem"
+			value="DEBUG" />
+		<AsyncLogger name="org.apache.hadoop.hbase" value="DEBUG" />
+		<AsyncLogger
+			name="org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation"
+			value="DEBUG" />
+		<AsyncLogger name="org.apache.hadoop.hbase.client.MetaScanner"
+			value="DEBUG" />
+		<AsyncLogger name="org.apache.hadoop.hbase.zookeeper.ZKUtil"
+			value="DEBUG" />
+		<AsyncLogger name="org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher"
+			value="DEBUG" />
+		<AsyncLogger name="org.apache.hadoop.ipc.HBaseServer.trace"
+			value="DEBUG" />
+		<AsyncLogger name="org.apache.zookeeper" value="DEBUG" />
+		<AsyncLogger name="SecurityAsyncLogger" additivity="false"
+			value="DEBUG" />
+
+       <Root level="DEBUG">
+           <AppenderRef ref="STDOUT"/>
+       </Root>
+   </Loggers>
+</Configuration>
