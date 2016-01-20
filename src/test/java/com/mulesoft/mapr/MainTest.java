@@ -24,7 +24,7 @@ import org.junit.runners.JUnit4;
 
 @RunWith(JUnit4.class)
 public class MainTest extends TestCase {
-
+	
 	@Test
 	public void shouldScanATable() throws IOException {
         Configuration conf = HBaseConfiguration.create();
